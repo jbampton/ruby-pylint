@@ -6,7 +6,7 @@
 #
 def lint(src)
   Dir.glob("#{src}/**/*.py").map do |filename|
-    puts `pylint "#{filename}"` unless filename.include? 'venv'
+    puts `pylint "#{filename}"` unless filename.include? '/venv/'
   end
 end
 
